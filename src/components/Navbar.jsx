@@ -1,18 +1,33 @@
 import { useState } from 'react'
 import './Navbar.css'
 
-const Navbar = ({ user, onLogout }) => {
+const Navbar = ({ user, onLogout, onNavigate, currentPage = 'home' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const handleNavigation = (page) => {
+    if (onNavigate) {
+      onNavigate(page)
+    }
+    setIsMenuOpen(false) // Cerrar menú móvil después de navegar
+  }
+
+  const navigationItems = [
+    { id: 'home', label: 'Inicio', icon: '🏠' },
+    { id: 'students', label: 'Estudiantes', icon: '👥' },
+    { id: 'courses', label: 'Cursos', icon: '📚' },
+    { id: 'attendance', label: 'Asistencia', icon: '📊' },
+    { id: 'reports', label: 'Reportes', icon: '📈' }
+  ]
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          <div className="brand-logo">
+          <div className="brand-logo" onClick={() => handleNavigation('home')}>
             <div className="logo-icon">
               <div className="icon-core"></div>
               <div className="icon-ring"></div>
@@ -23,26 +38,16 @@ const Navbar = ({ user, onLogout }) => {
 
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
           <div className="navbar-nav">
-            <a href="#" className="nav-link active">
-              <span className="nav-icon">🏠</span>
-              Inicio
-            </a>
-            <a href="#" className="nav-link">
-              <span className="nav-icon">👥</span>
-              Estudiantes
-            </a>
-            <a href="#" className="nav-link">
-              <span className="nav-icon">📚</span>
-              Cursos
-            </a>
-            <a href="#" className="nav-link">
-              <span className="nav-icon">📊</span>
-              Asistencia
-            </a>
-            <a href="#" className="nav-link">
-              <span className="nav-icon">📈</span>
-              Reportes
-            </a>
+            {navigationItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleNavigation(item.id)}
+                className={`nav-link ${currentPage === item.id ? 'active' : ''}`}
+              >
+                <span className="nav-icon">{item.icon}</span>
+                {item.label}
+              </button>
+            ))}
           </div>
 
           <div className="navbar-user">
