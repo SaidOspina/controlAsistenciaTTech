@@ -14,17 +14,14 @@ const Navbar = ({ user, onLogout, onNavigate, currentPage }) => {
 
   const handleNavigation = (page) => {
     onNavigate(page)
-    setIsMenuOpen(false)
+    setIsMenuOpen(false) // Cerrar menú móvil después de navegar
   }
 
   const handleLogout = () => {
-    // Limpiar datos de sesión si los hay
-    localStorage.removeItem('token')
-    localStorage.removeItem('user')
-    sessionStorage.clear()
-    
-    // Llamar a la función de logout del componente padre
+    // Solo llamar a la función de logout del componente padre
+    // sin usar localStorage/sessionStorage
     onLogout()
+    setIsMenuOpen(false) // Cerrar menú móvil
   }
 
   return (
@@ -39,7 +36,15 @@ const Navbar = ({ user, onLogout, onNavigate, currentPage }) => {
             <button 
               onClick={() => handleNavigation('home')} 
               className="brand-text"
-              style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#ffffff', fontSize: '1.5rem', fontWeight: 700, textShadow: '0 0 10px rgba(0, 162, 255, 0.5)' }}
+              style={{ 
+                background: 'none', 
+                border: 'none', 
+                cursor: 'pointer', 
+                color: '#ffffff', 
+                fontSize: '1.5rem', 
+                fontWeight: 700, 
+                textShadow: '0 0 10px rgba(0, 162, 255, 0.5)' 
+              }}
             >
               TalentoTech
             </button>

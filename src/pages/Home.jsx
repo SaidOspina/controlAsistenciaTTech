@@ -2,7 +2,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import './Home.css'
 
-const Home = ({ user, onLogout }) => {
+// eslint-disable-next-line no-empty-pattern
+const Home = ({ }) => {
   const stats = [
     {
       icon: '👥',
@@ -36,7 +37,6 @@ const Home = ({ user, onLogout }) => {
 
   return (
     <div className="home-container">
-      <Navbar user={user} onLogout={onLogout} />
       
       <main className="home-main">
         <div className="home-background">
@@ -146,8 +146,6 @@ const Home = ({ user, onLogout }) => {
           </section>
         </div>
       </main>
-
-      <Footer />
     </div>
   )
 }
