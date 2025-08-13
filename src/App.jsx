@@ -62,7 +62,7 @@ function App() {
       <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
         {renderCurrentPage()}
       </main>
-      {currentPage === 'home' && <Footer />}
+      {currentPage === 'home' && <Footer onNavigate={handleNavigation} />}
     </div>
   )
 }

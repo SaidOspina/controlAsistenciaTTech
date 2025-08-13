@@ -276,3 +276,42 @@
     border-top: 1px solid rgba(0, 162, 255, 0.3);
   }
 }
+
+.nav-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  width: auto;
+  text-align: left;
+}
+
+.nav-link:focus {
+  outline: 2px solid #00a2ff;
+  outline-offset: 2px;
+}
+
+/* Estilos para el brand button */
+.brand-text:focus {
+  outline: 2px solid #00a2ff;
+  outline-offset: 2px;
+}
+
+/* Estilos para botones del footer */
+.footer-link {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link:focus {
+  outline: 2px solid #00a2ff;
+  outline-offset: 2px;
+}
+
+.footer-link:hover {
+  color: #00a2ff;
+  transition: color 0.3s ease;
+}

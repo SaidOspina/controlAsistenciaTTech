@@ -1,6 +1,11 @@
 import './Footer.css'
 
-const Footer = () => {
+const Footer = ({ onNavigate }) => {
+  const handleNavigation = (page) => {
+    if (onNavigate) {
+      onNavigate(page)
+    }
+  }
   return (
     <footer className="footer">
       <div className="footer-background">
@@ -31,20 +36,52 @@ const Footer = () => {
             <div className="link-group">
               <h4 className="link-title">Plataforma</h4>
               <ul className="link-list">
-                <li><a href="#" className="footer-link">Dashboard</a></li>
-                <li><a href="#" className="footer-link">Estudiantes</a></li>
-                <li><a href="#" className="footer-link">Cursos</a></li>
-                <li><a href="#" className="footer-link">Reportes</a></li>
+                <li>
+                  <button 
+                    onClick={() => handleNavigation('home')} 
+                    className="footer-link"
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', textDecoration: 'none' }}
+                  >
+                    Dashboard
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleNavigation('students')} 
+                    className="footer-link"
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', textDecoration: 'none' }}
+                  >
+                    Estudiantes
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleNavigation('courses')} 
+                    className="footer-link"
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', textDecoration: 'none' }}
+                  >
+                    Cursos
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleNavigation('reports')} 
+                    className="footer-link"
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', textDecoration: 'none' }}
+                  >
+                    Reportes
+                  </button>
+                </li>
               </ul>
             </div>
 
             <div className="link-group">
               <h4 className="link-title">Recursos</h4>
               <ul className="link-list">
-                <li><a href="#" className="footer-link">Documentación</a></li>
-                <li><a href="#" className="footer-link">API</a></li>
-                <li><a href="#" className="footer-link">Guías</a></li>
-                <li><a href="#" className="footer-link">Soporte</a></li>
+                <li><a href="#docs" className="footer-link">Documentación</a></li>
+                <li><a href="#api" className="footer-link">API</a></li>
+                <li><a href="#guides" className="footer-link">Guías</a></li>
+                <li><a href="#support" className="footer-link">Soporte</a></li>
               </ul>
             </div>
 

@@ -34,13 +34,6 @@ const Home = ({ user, onLogout }) => {
     }
   ]
 
-  const quickActions = [
-    { icon: '➕', title: 'Nuevo Estudiante', desc: 'Registrar un nuevo estudiante', color: '#00a2ff' },
-    { icon: '📝', title: 'Tomar Asistencia', desc: 'Registrar asistencia de clases', color: '#00d4aa' },
-    { icon: '📈', title: 'Ver Reportes', desc: 'Generar reportes de asistencia', color: '#ff6b6b' },
-    { icon: '⚙️', title: 'Configuración', desc: 'Ajustar configuraciones del sistema', color: '#ffa726' }
-  ]
-
   return (
     <div className="home-container">
       <Navbar user={user} onLogout={onLogout} />
@@ -125,25 +118,6 @@ const Home = ({ user, onLogout }) => {
               ))}
             </div>
           </section>
-
-          {/* Quick Actions Section */}
-          <section className="actions-section">
-            <h2 className="section-title">Acciones Rápidas</h2>
-            <div className="actions-grid">
-              {quickActions.map((action, index) => (
-                <div key={index} className="action-card" style={{'--card-color': action.color}}>
-                  <div className="action-icon">{action.icon}</div>
-                  <h3 className="action-title">{action.title}</h3>
-                  <p className="action-desc">{action.desc}</p>
-                  <button className="action-button">
-                    Acceder
-                    <span className="button-arrow">→</span>
-                  </button>
-                </div>
-              ))}
-            </div>
-          </section>
-
           {/* Features Section */}
           <section className="features-section">
             <h2 className="section-title">Características Principales</h2>
