@@ -39,7 +39,6 @@ const Students = () => {
       'Desarrollo Web Frontend',
       'Data Science con Python',
       'Ciberseguridad Avanzada',
-      'Desarrollo Mobile con React Native',
       'Desarrollo Web Backend',
       'Machine Learning',
       'DevOps',
