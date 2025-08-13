@@ -36,7 +36,7 @@ const Students = () => {
   useEffect(() => {
     // Datos de ejemplo de cursos que coinciden con courses.jsx
     const mockCourses = [
-      'Desarrollo Web Frontend',
+      'Desarrollo Web',
       'Data Science con Python',
       'Ciberseguridad Avanzada',
       'Desarrollo Web Backend',
