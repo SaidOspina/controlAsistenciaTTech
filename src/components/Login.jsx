@@ -117,7 +117,7 @@ const Login = ({ onLogin }) => {
               <div className="logo-ring"></div>
             </div>
           </div>
-          <h1 className="login-title">TalentoTech</h1>
+          <h1 className="login-title">CASTech</h1>
           <p className="login-subtitle">Sistema de Control de Asistencia</p>
         </div>
 
