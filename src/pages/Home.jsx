@@ -63,16 +63,6 @@ const Home = ({ }) => {
                   Gestiona de manera inteligente la asistencia de tus estudiantes con tecnología de vanguardia. 
                   Monitoreo en tiempo real, reportes avanzados y análisis predictivo.
                 </p>
-                <div className="hero-buttons">
-                  <button className="btn-primary">
-                    <span className="btn-icon">🚀</span>
-                    Comenzar Ahora
-                  </button>
-                  <button className="btn-secondary">
-                    <span className="btn-icon">📊</span>
-                    Ver Dashboard
-                  </button>
-                </div>
               </div>
               
               <div className="hero-image">

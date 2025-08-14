@@ -304,13 +304,6 @@ const Students = () => {
     setStudents(updatedStudents)
   }
 
-  const handleDelete = (studentId) => {
-    if (window.confirm('¿Estás seguro de que deseas eliminar este estudiante?')) {
-      const updatedStudents = students.filter(student => student.id !== studentId)
-      setStudents(updatedStudents)
-    }
-  }
-
   const resetForm = () => {
     setFormData({
       nombres: '',
@@ -553,13 +546,6 @@ const Students = () => {
                         title={student.estado === 'Activo' ? 'Desactivar' : 'Activar'}
                       >
                         {student.estado === 'Activo' ? '⏸️' : '▶️'}
-                      </button>
-                      <button
-                        onClick={() => handleDelete(student.id)}
-                        className="btn-action btn-delete"
-                        title="Eliminar"
-                      >
-                        🗑️
                       </button>
                     </div>
                   </td>

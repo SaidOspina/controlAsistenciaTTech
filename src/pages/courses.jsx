@@ -245,14 +245,6 @@ const Courses = () => {
     localStorage.setItem('courses', JSON.stringify(updatedCourses))
   }
 
-  const handleDelete = (courseId) => {
-    if (window.confirm('¿Estás seguro de que deseas eliminar este curso?')) {
-      const updatedCourses = courses.filter(course => course.id !== courseId)
-      setCourses(updatedCourses)
-      localStorage.setItem('courses', JSON.stringify(updatedCourses))
-    }
-  }
-
   const resetForm = () => {
     setFormData({
       nombre: '',
@@ -471,13 +463,6 @@ const Courses = () => {
                 title={course.estado === 'Activo' ? 'Desactivar' : 'Activar'}
               >
                 {course.estado === 'Activo' ? '⏸️' : '▶️'}
-              </button>
-              <button
-                onClick={() => handleDelete(course.id)}
-                className="btn-action btn-delete"
-                title="Eliminar curso"
-              >
-                🗑️
               </button>
             </div>
           </div>

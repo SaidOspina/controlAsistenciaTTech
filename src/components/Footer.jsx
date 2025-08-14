@@ -26,9 +26,8 @@ const Footer = ({ onNavigate }) => {
               Sistema avanzado de control de asistencia para instituciones educativas tecnológicas.
             </p>
             <div className="footer-social">
-              <div className="social-link">📧</div>
-              <div className="social-link">🌐</div>
-              <div className="social-link">📱</div>
+              <a href="" target='_blank'><div className="social-link">📧</div></a>
+              <a href="https://www.talentotechoriente.com/" target='_blank'><div className="social-link">🌐</div></a>
             </div>
           </div>
 
@@ -72,16 +71,6 @@ const Footer = ({ onNavigate }) => {
                     Reportes
                   </button>
                 </li>
-              </ul>
-            </div>
-
-            <div className="link-group">
-              <h4 className="link-title">Recursos</h4>
-              <ul className="link-list">
-                <li><a href="#docs" className="footer-link">Documentación</a></li>
-                <li><a href="#api" className="footer-link">API</a></li>
-                <li><a href="#guides" className="footer-link">Guías</a></li>
-                <li><a href="#support" className="footer-link">Soporte</a></li>
               </ul>
             </div>
 

@@ -383,18 +383,6 @@ const Attendance = () => {
                     Total: {record.totalEstudiantes} estudiantes
                   </div>
                 </div>
-
-                <div className="record-actions">
-                  <button
-                    className="btn-view-details"
-                    onClick={() => {
-                      // Aquí podrías abrir un modal con los detalles completos
-                      console.log('Ver detalles:', record)
-                    }}
-                  >
-                    👁️ Ver Detalles
-                  </button>
-                </div>
               </div>
             )
           })}
